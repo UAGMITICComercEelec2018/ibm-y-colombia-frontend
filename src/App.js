@@ -10,12 +10,15 @@ import cards from "./methods_statement_cards.png";
 import oxxopay from "./oxxopay.svg";
 import paypal from "./paypal.svg";
 
+import PayPalSuccess from "./PayPalSuccess.js";
+
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <Switch>
           <Route path="/productos/:id" component={Item} />
+          <Route path="/paypal/success" component={PayPalSuccess} />
           <Route path="/" exact strict component={Item} />
           <Redirect to="/" />
         </Switch>
